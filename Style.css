@@ -1,0 +1,134 @@
+html {
+    background: linear-gradient(to bottom right, rgba(255, 0, 136, 0.553), rgba(255, 255, 0, 0.367)),
+                linear-gradient(to bottom left, rgb(0, 221, 255), rgba(0, 255, 0, 0.021));
+}
+
+.container {
+    border: 0px solid green;
+    border-radius: 30px;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    display: table;
+    left: calc(50% - 500px / 2);
+    top: calc(50% - 500px / 2);
+    background: linear-gradient(to bottom left, gold, rgba(255, 217, 0, 0.281));
+    box-shadow: 0 0 50px 20px rgba(255, 255, 0, 0.6);
+}
+
+.container .row {
+    display: table-row;
+    overflow: hidden;
+    resize: none;
+}
+
+.container .row p {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.8) , transparent 99%);
+    display: table-cell;
+    border: 1px solid rgba(0, 128, 0, 0.207);
+    border-radius: 30px;
+    width: calc(100% / 3);
+    height: calc(100% / 3);
+    text-align: center;
+    line-height: 160px;
+    overflow: hidden;
+    resize: none;
+}
+
+.O:before {
+    color: aqua;
+    content: "O"; 
+    font-size: 120px;
+}
+
+.X:before {
+    color:rgb(0, 0, 0);
+    content: '\d7'; 
+    font-size: 130px;
+}
+
+.buttonsList {
+    position: absolute;
+    left: calc(50% + 500px / 2);
+    top: calc(50% + 500px / 2 - 240px);
+    margin: 15px;
+    padding: 10px;
+
+}
+
+.button {
+    border: 1px solid rgba(11, 0, 133, 0.3);
+    box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.5);
+    color: black;
+    display: block;
+    background: linear-gradient(to bottom left, blue, aqua);
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.button:hover{
+    transition: transform 1s;
+    transform: scale(1.1);
+}
+
+.button:active{
+    transition: transform 0.6s;
+    transform: scale(0.9);
+}
+.button:not(:active):not(:hover){
+    transition: transform 1s;
+    transform: scale(1);
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+  
+.modal-content {
+    position: relative;
+    background: linear-gradient(to bottom left, white, rgb(255, 82, 82));
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 15px;
+    width: 100px;
+    height: 60px; 
+}
+  
+.close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#freezeGame {
+    width: 500px;
+    height: 500px;
+    z-index: 1;
+    display: none;
+    position: absolute;
+    left: calc(50% - 500px / 2);
+    top: calc(50% - 500px / 2);
+    background: transparent;
+}
