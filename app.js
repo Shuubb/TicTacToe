@@ -35,6 +35,6 @@ app.get('/AboutPage', (req, res) => {
     res.render("AboutPage", { title: 'About Me!' });
 });
 
-app.listen(port, () => {
+app.listen(port, '192.168.0.159' || 'localhost' , () => {
     console.log(`Example app listening on port ${port}`);
   })
