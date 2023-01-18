@@ -1,0 +1,28 @@
+{
+  "type": "module",
+  "name": "tic-tac-toe",
+  "version": "1.0.0",
+  "description": "cool game",
+  "main": "Mechanics.js",
+  "scripts": {
+    "sass": "sass --no-source-map --watch public/scss/Style.scss public/css/Style.css",
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shuubb/TicTacToe.git"
+  },
+  "author": "Davit Shubitidze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shuubb/TicTacToe/issues"
+  },
+  "homepage": "https://github.com/Shuubb/TicTacToe#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1",
+    "sass": "^1.57.1"
+  }
+}

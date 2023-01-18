@@ -1,0 +1,200 @@
+html {
+  background: linear-gradient(to bottom right, rgba(255, 0, 136, 0.553), rgba(255, 255, 0, 0.367)), linear-gradient(to bottom left, rgb(0, 221, 255), rgba(0, 255, 0, 0.021));
+  font-family: Arial, Helvetica, sans-serif, Georgia, "Times New Roman", Times, serif;
+  resize: none;
+}
+
+body {
+  margin: 60px;
+}
+
+.containerOfContainer {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+
+.containerOfContainer div:not(.container) {
+  width: 100%;
+  align-self: center;
+  height: fit-content;
+}
+
+.container {
+  border: 0px solid green;
+  border-radius: 30px;
+  width: 100%;
+  height: 70%;
+  min-width: 300px;
+  min-height: 300px;
+  position: relative;
+  background: linear-gradient(to bottom left, gold, rgba(255, 217, 0, 0.281));
+  box-shadow: 0 0 50px 20px rgba(255, 255, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.container .row {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.container .row div {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), transparent 99%);
+  position: relative;
+  border: 1px solid rgba(0, 128, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.container .row div.X p.CrossI {
+  width: 10%;
+  rotate: 45deg;
+  transition: scale 0.5s;
+  scale: 1 10;
+}
+.container .row div.X p.CrossII {
+  width: 10%;
+  rotate: -45deg;
+  transition: scale 0.5s;
+  scale: 1 10;
+}
+.container .row div.O p.CrossI {
+  border: 0px solid white;
+  background: transparent;
+  border-radius: 100%;
+  transition: width 0.5s, height 0.5s, border-width 0.5s;
+  width: 80%;
+  height: 80%;
+  border-width: 5px;
+}
+
+.container .row div p {
+  position: absolute;
+  align-self: center;
+  width: 0px;
+  height: 10%;
+  background: black;
+}
+
+.buttonsList {
+  position: relative;
+  margin: 15px;
+  padding: 10px;
+}
+
+.button {
+  border: 1px solid rgba(11, 0, 133, 0.3);
+  box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.5);
+  color: black;
+  display: block;
+  background: linear-gradient(to bottom left, blue, aqua);
+  border-radius: 15px;
+  font-size: 20px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.button:hover {
+  transition: transform 1s;
+  transform: scale(1.1);
+}
+
+.button:active {
+  transition: transform 0.6s;
+  transform: scale(0.9);
+}
+
+.button:not(:active):not(:hover) {
+  transition: transform 1s;
+  transform: scale(1);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  position: relative;
+  background: linear-gradient(to bottom left, white, rgb(255, 82, 82));
+  margin: 15% auto;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 15px;
+  width: 100px;
+  height: 60px;
+}
+
+#modalText {
+  align-self: center;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#freezeGame {
+  width: 500px;
+  height: 500px;
+  z-index: 1;
+  display: none;
+  position: absolute;
+  left: calc(50% - 250px);
+  top: calc(50% - 250px);
+  background: transparent;
+}
+
+.navbar {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  background: linear-gradient(to right, red, white);
+}
+
+.navbar a {
+  position: relative;
+  left: 100px;
+  top: 4px;
+  font-size: 18px;
+  background-color: rgba(255, 255, 0, 0.2);
+  color: black;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 6px;
+  margin: 10px;
+  transition: background-color 0.4s;
+  height: fit-content;
+}
+
+.navbar .mainNavIco {
+  top: 0;
+  font-size: 26px;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 0, 0.6);
+}
